@@ -1,0 +1,132 @@
+tor]
+mouse = true
+scrolloff = 2
+scroll-lines = 2
+line-number = "absolute"
+cursorline = true
+auto-completion = false
+auto-format = false
+completion-timeout = 5
+preview-completion-insert = false
+completion-trigger-len = 3
+completion-replace = false
+auto-info = true
+true-color = true
+undercurl = false
+bufferline = "always"
+text-width = 512
+indent-heuristic = "simple"
+default-line-ending = "lf"
+insert-final-newline = true
+shell = [ "fish", "-c" ]
+popup-border = "all"
+color-modes = true
+lsp.enable = false
+
+[editor.gutters]
+layout = [ "line-numbers", "spacer" ]
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+character = "│"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'<' = '>'
+
+[editor.search]
+smart-case = false
+wrap-around = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[keys.normal]
+"C-left" = [ "move_prev_word_start", "collapse_selection" ]
+"C-right" = [ "move_next_word_start", "collapse_selection" ]
+"C-up" = "page_cursor_half_up"
+"C-down" = "page_cursor_half_down"
+"C-y" = "redo"
+"C-z" = "undo"
+"C-c" = "yank_to_clipboard"
+"C-v" = "paste_clipboard_before"
+"C-d" = "kill_to_line_end"
+"D" = "kill_to_line_start"
+"C-a" = "select_all"
+"C-o" = "file_picker_in_current_directory"
+"C-," = "goto_previous_buffer"
+"C-." = "goto_next_buffer"
+"C-7" = "toggle_line_comments"
+"S-left" = "extend_char_left"
+"S-right" = "extend_char_right"
+"S-up" = "extend_line_up"
+"S-down" = "extend_line_down"
+"C-S-left" = "extend_prev_word_end"
+"C-S-right" = "extend_next_word_end"
+"C-s" = ":u"
+"C-w" = ":buffer-close"
+"C-W" = ":buffer-close!"
+"o" = [ "add_newline_below", "normal_mode" ]
+"O" = [ "add_newline_above", "normal_mode" ]
+"C-A-a" = ":config-open"
+"C-A-n" = ":config-reload"
+"d" = "delete_selection_noyank"
+"A-d" = "delete_selection"
+"P" = "paste_after"
+"p" = "paste_before"
+
+[keys.insert]
+"C-left" = [ "move_prev_word_start", "collapse_selection" ]
+"C-right" = [ "move_next_word_start", "collapse_selection" ]
+"C-up" = "page_cursor_half_up"
+"C-down" = "page_cursor_half_down"
+"C-backspace" = "delete_word_backward"
+"C-h" = "delete_word_backward"
+"C-del" = "delete_word_forward"
+"C-y" = "redo"
+"C-z" = "undo"
+"C-c" = "yank_to_clipboard"
+"C-v" = "paste_clipboard_before"
+
+[keys.select]
+"a" = [ "append_mode", "collapse_selection" ]
+"C-left" = "move_prev_word_start"
+"C-right" = "move_next_word_start"
+"C-up" = "page_cursor_half_up"
+"C-down" = "page_cursor_half_down"
+"C-y" = "redo"
+"C-z" = "undo"
+"C-c" = "yank_to_clipboard"
+"C-v" = "paste_clipboard_before"
+"C-d" = "kill_to_line_end"
+"C-D" = "kill_to_line_start"
+"C-a" = "select_all"
+"C-7" = "toggle_block_comments"
+"S-left" = "extend_char_left"
+"S-right" = "extend_char_right"
+"S-up" = "extend_line_up"
+"S-down" = "extend_line_down"
+"C-S-left" = "extend_prev_word_end"
+"C-S-right" = "extend_next_word_end"
+"h" = "select_regex"
+"d" = "delete_selection_noyank"
+"A-d" = "delete_selection"
+"P" = "paste_after"
+"p" = "paste_before"
+
+
