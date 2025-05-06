@@ -1,4 +1,6 @@
-tor]
+theme = "everforest_dark"
+
+[editor]
 mouse = true
 scrolloff = 2
 scroll-lines = 2
@@ -128,5 +130,4 @@ newline = "none"
 "A-d" = "delete_selection"
 "P" = "paste_after"
 "p" = "paste_before"
-
 
