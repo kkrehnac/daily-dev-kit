@@ -20,28 +20,28 @@ if (!(Test-Path $todayPath)) {
                 ($_.Line -replace "\s+#MIG\d*", "") + " #MIG"
             }
             if ($undoneTasks) {
-                $migratedTasksBlock = $undoneTasks -join "n"
+                $migratedTasksBlock = $undoneTasks -join "`n"
                 $previousPath = $previousPathCandidate
             }
             break
         }
     }
 
-    $output = "# $todayn"
+    $output = "# $today`n"
 
-    $output += "n## Tasks"
+    $output += "`n## Tasks"
     if ($migratedTasksBlock -ne "") {
-        $output += "n$migratedTasksBlock"
+        $output += "`n$migratedTasksBlock"
     }
 
-    $output += "nn## Notes"
+    $output += "`n`n## Notes"
 
     # Write the new file
     $output | Out-File -Encoding utf8 $todayPath
 
     # Clean migrated tasks from previous note
     if ($previousPath -and (Test-Path $previousPath)) {
-        (Get-Content $previousPath) | Where-Object {$_ -notmatch "^- \[ \] "} | Set-Content $previousPath
+        (Get-Content $previousPath) | Where-Object { $_ -notmatch "^- \[ \] " } | Set-Content $previousPath
     }
 }
 
