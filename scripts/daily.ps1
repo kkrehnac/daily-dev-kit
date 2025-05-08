@@ -17,7 +17,7 @@ if (!(Test-Path $todayPath)) {
 
         if (Test-Path $previousPathCandidate) {
             $undoneTasks = Select-String -Path $previousPathCandidate -Pattern "^- \[ \] " | ForEach-Object {
-                ($_.Line -replace "\s+#MIG\d*", "") + " #MIG"
+                ($_.Line -replace "\s+#mig\d*", "") + " #mig"
             }
             if ($undoneTasks) {
                 $migratedTasksBlock = $undoneTasks -join "`n"
